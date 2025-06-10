@@ -1,7 +1,7 @@
 export default function Video() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="bg-gradient-to-l from-[#CDEBC5] text-center font-bold text-2xl p-3 w-full">Descripcion</h1>
+      <h1 className="bg-gradient-to-l from-[#AEDCAE] text-center font-bold text-2xl p-3 w-full">Descripcion</h1>
       <div className="flex items-center justify-center flex-col gap-5 my-3 max-w-[900px]">
         <p><span className="font-bold">¿Antojo de algo dulce, cremoso y lleno de sabor?</span> En Mil Delicias tenemos el postre perfecto para ti. Disfruta nuestras irresistibles cremas de leche con galletas Ducales, combinadas con sabores únicos que te harán cerrar los ojos de puro gusto:</p>
         <ul className="max-w-[800px]">

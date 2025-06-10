@@ -13,8 +13,8 @@ function Inicio() {
         <div className="flex justify-center">
           <Carrusel />
         </div>
-        <Historia />
         <Descripcion />
+        <Historia />
       </main>
       <Footer />
     </>
