@@ -28,7 +28,7 @@ export const personas = [
       {
         id: 1,
         nombre: "Gmail",
-        url: "mailto:colombiaenunsabor@gmail.com",
+        url: "mailto:mafermayaleon@gmail.com",
       },
       {
         id: 2, 
