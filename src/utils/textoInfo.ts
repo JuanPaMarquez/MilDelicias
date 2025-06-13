@@ -1,3 +1,4 @@
+import { reWhatsapp } from "./refactor"
 
 export const textoInfo = [
   {
@@ -22,22 +23,53 @@ export const personas = [
   {
     id: 1,
     nombre: "Mariana Fernanda Maya",
-    correo: "mafermayaleon@gmail.com",
-    telefono: "3103711948", 
-    foto: "./fotos/foto1.jpg"
+    foto: "./fotos/foto1.jpg",
+    redes: [
+      {
+        id: 1,
+        nombre: "Gmail",
+        url: "mailto:colombiaenunsabor@gmail.com",
+      },
+      {
+        id: 2, 
+        nombre: "WhatsApp",
+        url: reWhatsapp("3103711948"),
+      }
+    ]
   },
   {
     id: 2,
     nombre: "Yurani Melissa Gallardo",
-    correo: "Melissagallardo2004@gmail.com",
-    telefono: "3166575625", 
-    foto: "./fotos/foto2.jpg"
+    foto: "./fotos/foto2.jpg",
+    redes: [
+      {
+        id: 1,
+        nombre: "Gmail",
+        url: "mailto:Melissagallardo2004@gmail.com",
+      },
+      {
+        id: 2, 
+        nombre: "WhatsApp",
+        url: reWhatsapp("3166575625"),
+      }
+    ]
   },
   {
     id: 3,
     nombre: "María Fernanda Ibarra",
-    correo: "fernandaibarra190405@gmail.com",
-    telefono: "3204392230", 
-    foto: "./fotos/foto3.jpg"
+    foto: "./fotos/foto3.jpg",
+    redes: [
+      {
+        id: 1,
+        nombre: "Gmail",
+        url: "mailto:fernandaibarra190405@gmail.com",
+      }
+      ,
+      {
+        id: 2, 
+        nombre: "WhatsApp",
+        url: reWhatsapp("3204392230"),
+      }
+    ]
   }
 ]
