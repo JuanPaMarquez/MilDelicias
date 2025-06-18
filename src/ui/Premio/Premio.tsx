@@ -2,7 +2,20 @@ import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const codigo = ["mil-9523", "mil-2435", "mil-6754"];
+const codigo = [
+  {
+    id: "mil-9523",
+    premio: "Postre grande"
+  }, 
+  {
+    id: "mil-2435",
+    premio: "Postres pequeño"
+  },
+  {
+    id: "mil-6754",
+    premio: "Postres pequeño"
+  }
+];
 
 export default function Premio () {
   const navigate = useNavigate();
@@ -11,11 +24,16 @@ export default function Premio () {
 
   const [showContent, setShowContent] = useState(false);
   const [confettiActive, setConfettiActive] = useState(true);
+  const [premio, setPremio] = useState('');
 
   useEffect(() => {
+    const foundcode = codigo.find(code => code.id === id);
+    if (!foundcode) {
+      navigate('/');
+      return;
+    }
 
-    if (!id || !codigo.includes(id)) navigate('/');
-
+    setPremio(foundcode.premio);
     setTimeout(() => setShowContent(true), 500);
     
     setTimeout(() => setConfettiActive(false), 8000);
@@ -77,7 +95,7 @@ export default function Premio () {
                 <div className="text-6xl mr-4 float">🎁</div>
                 <div className="text-left">
                   <p className="text-lg text-gray-300">Has ganado</p>
-                  <p className="text-2xl sm:text-3xl md:text-5xl font-bold text-yellow-400">Postrecito</p>
+                  <p className="text-2xl sm:text-3xl md:text-5xl font-bold text-yellow-400">{premio}</p>
                 </div>
               </div>
               
